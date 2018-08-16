@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <style>
+      body {
+      background-color: #000;
+      font-size: 5vw;
+      color: #FFF;
+      }
+      h1 {
+      color: white;
+      text-align: center;
+      }
+      .time {
+      font-family: verdana;
+      font-size: 1.5em;
+      }
+    </style>
+      <script src="moment.min.js"></script>
+    <script>
+      function digi() {
+      var date = new Date(),
+      hour = date.getHours(),
+      minute = checkTime(date.getMinutes()),
+      ss = checkTime(date.getSeconds());
+      
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      
+      if (hour > 12) {
+        hour = hour - 12;
+        if (hour == 12) {
+          hour = checkTime(hour);
+          document.getElementById("tt").innerHTML = hour + ":" + minute + ":" + ss + " AM";
+        } else
+        {
+          hour = checkTime(hour);
+          document.getElementById("tt").innerHTML = hour + ":" + minute + ":" + ss + " PM";
+        }
+      } else
+      {
+        document.getElementById("tt").innerHTML = hour + ":" + minute + ":" + ss + " AM";
+      }
+    
+      document.getElementById("dd").innerHTML = date.toDateString();
+          
+      var time = setTimeout(digi, 1000);
+      }
+    </script>
+  </head>
+  <body onload="digi()">
+    <h1 class="time" id="tt"></h1>
+    <h1 class="time" id="dd"></h1> 
+  </body>
+</html>
