@@ -1,5 +1,6 @@
 # node_clock
-JavaScript clock app for Raspberry Pi
+
+JavaScript clock app for Raspberry Pi. When to Pi boots it spins up a very simple nodejs / express webserver then boots up Chromium in kiosk mode and connects to it displaying time and date. An extremely simple program and probably a waste of a good Pi.
 
 Installation
 
