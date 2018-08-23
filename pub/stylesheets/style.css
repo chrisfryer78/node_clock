@@ -1,0 +1,23 @@
+body {
+    font-family: verdana;
+    background-color: #000;
+    font-size: 5vw;
+    color: #FFF;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+p {
+    color: white;
+    text-align: center;
+}
+.time {
+    font-size: 2.6em;
+}
+.date {
+    font-size: 1em;
+}
+#ip {
+    font-size: 0.1em;
+}
