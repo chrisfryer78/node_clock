@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var ip = require('ip');
-var port = 3009;
+var port = 3000;
 
 var app = express();
 
