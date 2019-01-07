@@ -6,11 +6,7 @@ Installation
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install git
-
-sudo apt install nodejs
-
-sudo apt install npm
+sudo apt install git nodejs npm
 
 git clone https://github.com/chrisfryer78/node_clock.git
 
