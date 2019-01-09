@@ -19,3 +19,14 @@ chmod +x kiosk.sh
 npm install
 
 sudo reboot
+
+It's advised that you disable screen blanking:
+
+sudo nano /etc/lightdm/lightdm.conf
+
+And add the following at the bottom.
+
+  [SeatDefaults]
+  xserver-command=X -s 0 -dpms
+
+Sit back and enjoy your new clock that never needs to be reset again.
